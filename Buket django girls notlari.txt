@@ -1,0 +1,25 @@
+Buket Django Girls notlari:
+
+Django girls asamalari:
+
+Butun installation yapildiktan sonra setting.py dosyasinda bazi parametreleri degistiriyoruz. Mesela local language, database, allowed hosts, etc.
+
+Ikinci asama:
+python manage.py migrate
+
+If there's no database, this creates one for us
+
+sonra start the server:
+python manage.py runserver
+
+and go to:
+
+http://127.0.0.1:8000/
+
+Creating an application
+
+To keep everything tidy, we will create a separate application inside our project. It is very nice to have everything organized from the very beginning. To create an application we need to run the following command in the console (from djangogirls directory where manage.py file is):
+
+python manage.py startapp blog
+
+We need to find INSTALLED_APPS and add a line containing 'blog', in the seetings.py file
