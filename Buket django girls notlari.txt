@@ -23,3 +23,24 @@ To keep everything tidy, we will create a separate application inside our projec
 python manage.py startapp blog
 
 We need to find INSTALLED_APPS and add a line containing 'blog', in the seetings.py file
+Creating a blog post model
+
+In the blog/models.py file we define all objects called Models – this is a place in which we will define our blog post.
+Create tables for models in your database
+
+The last step here is to add our new model to our database. First we have to make Django know that we have some changes in our model. (We have just created it!) Go to your console window and type python manage.py makemigrations blog. It will look like this:
+
+command-line
+
+(myvenv) ~/djangogirls$ python manage.py makemigrations blog
+Migrations for 'blog':
+  blog/migrations/0001_initial.py:
+  - Create model Post
+
+  Bundan sonra pythonanywhere icin deployment var, onu yapriktan sonra url kismina geliyor:
+  mysite/urls.py
+
+    url(r'^admin/', admin.site.urls),
+
+
+This line means that for every URL that starts with admin/, Django will find a corresponding view. In this case, we're including a lot of admin URLs so it isn't all packed into this small file – it's more readable and cleaner.
